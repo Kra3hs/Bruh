@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 01</title>
+        <script src="./js/script.js" ></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .fnt{
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: black;
+            }
+            input{
+                border: 2px solid red;
+                background-color: aliceblue;
+                margin: 5px;
+            }
+            button:hover{
+                background-color: blue;
+                cursor: pointer;
+            }
+            button:active{
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><u>แนะนำ</u>:</h1>
+        <p class="fnt">1) เข้าถึงเพื่ออ่านค่าจาก text box ด้วยคำสั่ง document.getElementById("id").value</p>
+        <p class="fnt">2) กำหนดค่าให้ text box ด้วยคำสั่ง document.getElementById("id").value = x</p>
+        <p class="fnt">3) กำหนดค่าให้กับแท็กคำสั่ง เช่นแท็ก p ด้วยคำสั่ง document.getElementById("id").innerHTML= x</p>
+        <hr />
+        <h1><u>ข้อที่ 1.</u></h1>
+        <p class="fnt">จงเขียนโปรแกรม JavaScript สำหรับนับจำนวนตัวเลขคี่ในช่วงที่กำหนด</p>
+        <h2><u>ดำเนินการดังนี้</u></h2>
+        <p class="fnt">1) ป้อนข้อมูลจุดเริ่มต้น (Start)</p>
+        <p class="fnt">2) ป้อนข้อมูลจุดสิ้นสุด (End)</p>
+        <p class="fnt">3) เมื่อคลิกที่ปุ่ม button ให้ดำเนินการนับจำนวนตัวเลขคี่</p>
+        <p class="fnt">4) นำผลลัพธ์แสดงตรง จำนวนเลขคี่</p>
+        <p class="fnt">5) ให้นักศึกษาปรับปรุงแก้ไขฟังก์ชัน countOdd() ในไฟล์ script.js</p>
+        <br />
+        <br />
+        <label for="start1" class="fnt">Start</label>
+        <input type="text" id="start1" name="start1" class="fnt"/> <span class="fnt">* จุดเริ่มต้น</span>
+        <br />
+        <label for="end1" class="fnt">End</label>
+        <input type="text" id="end1" name="end1" class="fnt"/> <span class="fnt">* จุดสิ้นสุด</span>
+        <br />
+        <button type="submit" onclick="countOdd();" class="fnt">Click</button>
+        <br /> 
+        <label for="answer1" class="fnt">จำนวนเลขคี่:</label>
+        <input type="text" id="answer1" name="answer1" class="fnt"/><span class="fnt">* ผลลัพธ์</span>
+        <hr />
+        <h1><u>ข้อที่ 2.</u></h1>
+        <p class="fnt">ให้นำข้อที่ ข้อที่ 1. มาปรับปรุง โดยให้ตรวจสอบตัวเลขจุดเริ่มต้นและจุดสิ้นสุดที่ผู้ใช้ป้อน </p>
+        <h2><u>ดำเนินการดังนี้</u></h2>
+        <p class="fnt">1) ป้อนข้อมูลจุดเริ่มต้น (Start)</p>
+        <p class="fnt">2) ป้อนข้อมูลจุดสิ้นสุด (End)</p>
+        <p class="fnt">3) เมื่อคลิกที่ปุ่ม button ให้ดำเนินการดังนี้ </p>
+        <p class="fnt">3.1) ตรวจสอบว่าผู้ใช้ป้อนข้อมูลจุดเริ่มต้นหรือจุดสิ้นสุดหรือไม่ ถ้าไม่ป้อนข้อมูลให้แสดงข้อความ "Not a Number" ตรง จำนวนเลขคี่ (ไม่ต้องคำนวณ)</p>
+        <p class="fnt">3.2) ถ้าผู้ใช้ป้อนข้อมูลให้ตรวจสอบว่าค่าที่ผู้ใช้ป้อนจุดเริ่มต้นหรือจุดสิ้นสุดเป็นตัวเลขหรือไม่ ถ้าไม่ใช่ตัวเลขให้แสดงข้อความ "Not a Number" ตรง จำนวนเลขคี่ (ไม่ต้องคำนวณ)</p>
+        <p class="fnt">3.3) ถ้าผู้ใช้ป้อนข้อมูลและเป็นตัวเลขให้นับจำนวนจำนวนเลขคี่่</p>
+        <p class="fnt">4) นำผลลัพธ์แสดงตรง จำนวนเลขคี่</p>
+        <p class="fnt">5) ให้นักศึกษาปรับปรุงแก้ไขฟังก์ชัน countOdd2() ในไฟล์ script.js</p>
+        <p class="fnt"><u>หมายเหตุ:</u> ตรวจสอบว่าเป็นตัวเลขหรือไม่ด้วยฟังก์ชัน isNaN() ถ้าไม่ใช่ตัวเลข return true</p>
+        <p class="fnt"><u>หมายเหตุ:</u> ตรวจสอบว่าผู้ใช้ป้อนข้อมูลหรือไม่ด้วยคุณสมบัติ value เช่น ถ้า x.value == "" แสดงว่าผู้ใช้ไม่ป้อนข้อมูล</p>
+        <p class="fnt"><u>หมายเหตุ:</u> คุณสมบัติ value ใช้กับพวก text box </p>
+        <br />
+        <br />
+        <label for="start2" class="fnt">Start</label>
+        <input type="text" id="start2" name="start2" class="fnt"/> <span class="fnt">* จุดเริ่มต้น</span>
+        <br />
+        <label for="end2" class="fnt">End</label>
+        <input type="text" id="end2" name="end2" class="fnt"/> <span class="fnt">* จุดสิ้นสุด</span>
+        <br />
+        <button type="submit" onclick="countOdd2();" class="fnt">Click</button>
+        <br /> 
+        <label for="answer2" class="fnt">จำนวนเลขคี่:</label>
+        <input type="text" id="answer2" name="answer2" class="fnt"/><span class="fnt">* ผลลัพธ์</span>
+        <hr />
+        <h1><u>ข้อที่ 3.</u></h1>
+        <p class="fnt">จงเขียนโปรแกรม JavaScript สำหรับคำนวณหาค่าเลขยกกำลัง X<sup>Y</sub></p>
+        <p class="fnt">1) ถ้า Y = 0 เช่น Y = 0, X = 5 ดังนั้น <span>X<sup>Y</sub></span>  = 1</p>
+        <p class="fnt">2) ถ้า Y > 0 เช่น Y = 2, X = 5 ดังนั้น <span>X<sup>Y</sub></span>  = 25</p>   
+        <p class="fnt">3) ถ้า Y < 0 เช่น Y = -4, X = 2 ดังนั้น <span>X<sup>Y</sub></span>  = 0.0625</p> 
+        <h2><u>ดำเนินการดังนี้</u></h2> 
+        <p class="fnt">1) ป้อนข้อมูลค่า X</p>
+        <p class="fnt">2) ป้อนข้อมูลค่า Y</p>
+        <p class="fnt">3) เมื่อคลิกที่ปุ่ม button ให้ดำเนินการดังนี้ </p>
+        <p class="fnt">3.1) ตรวจสอบว่าผู้ใช้ป้อนค่า X หรือ Y หรือไม่ ถ้าไม่ป้อนข้อมูลให้แสดงข้อความ "Not a Number" ตรงผลลัพธ์ (ไม่ต้องคำนวณ)</p>
+        <p class="fnt">3.2) ถ้าผู้ใช้ป้อนข้อมูลให้ตรวจสอบว่าค่า  X หรือ Y ที่ผู้ใช้ป้อนเป็นตัวเลขหรือไม่ ถ้าไม่ใช่ตัวเลขให้แสดงข้อความ "Not a Number" ตรงผลลัพธ์ (ไม่ต้องคำนวณ)</p>
+        <p class="fnt">3.3) ถ้าผู้ใช้ป้อนข้อมูลและเป็นตัวเลขให้คำนวณหาค่า <span>X<sup>Y</sub></span></p>
+        <p class="fnt">3.4) ในขณะคำนวณหาค่า <span>X<sup>Y</sub></span> ให้ตรวจสอบว่าผลลัพธ์ของการคำนวณเกินขอบเขตมากๆ หรือไม่ ถ้าเกินขอบเขตมากๆ ให้หยุดคำนวณและให้แสดงข้อความ Infinity ตรงผลลัพธ์</p> 
+        <p class="fnt">4) นำผลลัพธ์แสดง ตรงผลลัพธ์</p>
+        <p class="fnt">5) ให้นักศึกษาปรับปรุงแก้ไขฟังก์ชัน power() ในไฟล์ script.js</p>
+        <br />
+        <br />
+        <label for="x1" class="fnt">X</label>
+        <input type="text" id="x1" name="x1" class="fnt"/> <span class="fnt">* ป้อนค่าของ X</span>
+        <br />
+        <label for="y1" class="fnt">Y</label>
+        <input type="text" id="y1" name="y1" class="fnt"/> <span class="fnt">* ป้อนค่าของ Y</span>
+        <br />
+        <button type="submit" onclick="power();" class="fnt">Click</button>
+        <br /> 
+        <label for="answer3" class="fnt">ผลลัพธ์:=</label>
+        <input type="text" id="answer3" name="answer3" class="fnt"/><span class="fnt">* ผลลัพธ์</span>
+        <hr />        
+        <h1><u>ข้อที่ 4.</u></h1>
+        <p class="fnt">จงเขียนโปรแกรม JavaScript สำหรับตัดข้อความด้วยฟังก์ชัน substring() จากนั้นให้นำข้อความที่ตัดมาเชื่อมต่อกันเป็นข้อความใหม่</p>
+        <h2><u>ดำเนินการดังนี้</u></h2>
+        <p class="fnt">1) ป้อนข้อมูลค่า ข้อความที่ 1</p>
+        <p class="fnt">2) ป้อนข้อมูลค่า ข้อความที่ 2</p>
+        <p class="fnt">3) เมื่อคลิกที่ปุ่ม button ให้ดำเนินการดังนี้ </p>
+        <p class="fnt">3.1) ตรวจสอบว่าถ้าผู้ใช้ป้อนค่าข้อความที่ 1 หรือ ข้อความที่ 2 หรือไม่ ถ้าไม่ป้อนให้แสดงข้อความ "Empty" ตรงข้อความที่ 3</p>
+        <p class="fnt">3.2) ถ้าผู้ใช้ป้อนข้อความที่ 1 ตรวจสอบว่ามีความยาวต่ำกว่า 18 ตัวอักษรหรือไม่ ถ้าจริงให้แสดงข้อความ "Error" ตรงข้อความที่ 3</p>
+        <p class="fnt">3.3) ถ้าผู้ใช้ป้อนข้อความที่ 2 ตรวจสอบว่ามีความยาวต่ำกว่า 26 ตัวอักษรหรือไม่ ถ้าจริงให้แสดงข้อความ "Error" ตรงข้อความที่ 3</p>
+        <p class="fnt">3.4) ถ้าป้อนข้อความที่ 1 และข้อความที่ 2 และมีความยาวตามที่กำหนด ให้เรียกใช้งานฟังก์ชัน substring(start, end) เพื่อตัดข้อความ ณ ตำแหน่ง index ที่ start จนถึงตำแหน่ง end-1 ข้อความที่ 1 ตัดเอาเฉพาะ "TNI" ข้อความที่ 2 ตัดเอาเฉพาะ "Engineering"</p>
+        <p class="fnt">3.5) นำเอาข้อความที่ได้ในข้อที่ 3.4) มาเชื่อมต่อกันเป็นข้อความที่ 3 (ให้คั่นกลางด้วยช่องว่าง)
+        <p class="fnt">4) นำข้อความที่ได้ในข้อที่ 3.5) ไปแสดงตรงข้อความที่ 3 </p>
+        <p class="fnt">5) ให้นักศึกษาปรับปรุงแก้ไขฟังก์ชัน subString() ในไฟล์ script.js</p>
+           
+        <p class="fnt"><u>หมายเหตุ:</u> อ่านค่าขนาดความยาวของข้อความด้วยคุณสมบัติ length เช่น x.length เป็นต้น</p>
+        <br />
+        <br />
+        <label for="string1" class="fnt">ข้อความที่ 1</label>
+        <input type="text" id="string1" name="string1" class="fnt"/> <span class="fnt">* ป้อนข้อความคือ "Welcome to TNI !!!" จากนั้นให้ตัดเอาเฉพาะ "TNI"</span>
+        <br />
+        <label for="string2" class="fnt">ข้อความที่ 2</label>
+        <input type="text" id="string2" name="string2" class="fnt"/> <span class="fnt">* ป้อนข้อความคือ "Faculty of Engineering !!!" จากนั้นให้ตัดเอาเฉพาะ "Engineering"</span>
+        <br />
+        <button type="submit" onclick="subString();" class="fnt">Click</button>
+        <br /> 
+        <label for="string3" class="fnt">ข้อความที่ 3:</label>
+        <input type="text" id="string3" name="string3" class="fnt"/><span class="fnt">* ผลลัพธ์คือ "TNI Engineering"</span>
+        <hr />
+        <h1><u>ข้อที่ 5.</u></h1>
+        <p class="fnt">จงเขียนโปรแกรม JavaScript สำหรับจัดแสดงตัวเลขจำนวนเฉพาะที่อยู่ในช่วงที่กำหนด</p>
+        <p class="fnt"><u>หมายเหตุ:</u>"จำนวนเฉพาะ" หรือ ไพรม์ นัมเบอร์ (Prime number) คือ จำนวนธรรมชาติที่มีตัวหารที่เป็นบวกอยู่ 2 ตัว คือ 1 กับตัวมันเอง เช่น จำนวนเฉพาะที่อยู่ระหว่าง 1-100 คือ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 เป็นต้น และสำหรับเลข 1 ไม่เป็นจำนวนเฉพาะ</p>
+        <p class="fnt"><u>หมายเหตุ:</u>ตัวเลขที่จะนำมาหารตัวเลขจำนวนใดๆ ลงตัว ปกติมักจะมีค่าครึ่งหนึ่งของตัวเลขจำนวนนั้น เช่น ตัวเลขที่หาร 9 ลงตัวที่เป็นไปได้อยู่ในช่วง 1-4 เท่านั้น ถ้าเกินกว่านี้จะไม่มีโอกาสหารลงตัว </p>
+        <h2><u>ดำเนินการดังนี้</u></h2>
+        <p class="fnt">1) ป้อนข้อมูลค่าจุดเริ่มต้น</p>
+        <p class="fnt">2) ป้อนข้อมูลค่าจุดสิ้นสุด</p>
+        <p class="fnt">3) เมื่อคลิกที่ปุ่ม button ให้ดำเนินการดังนี้ </p>
+        <p class="fnt">3.1) ตรวจสอบว่าผู้ใช้ป้อนข้อมูลจุดเริ่มต้นหรือจุดสิ้นสุดหรือไม่ ถ้าไม่ป้อนให้แสดงข้อความ "Not a Number" ตรง Output (ไม่ต้องคำนวณ)</p>
+        <p class="fnt">3.2) ถ้าผู้ใช้ป้อนจุดเริ่มต้นและจุดสิ้นสุดให้ตรวจสอบว่าค่าที่ผู้ใช้ป้อนเป็นตัวเลขหรือไม่ ถ้าไม่ใช่ตัวเลขให้แสดงข้อความ "Not a Number" ตรง Output (ไม่ต้องคำนวณ)</p>
+        <p class="fnt">3.3) ถ้าผู้ใช้ป้อนข้อมูลและเป็นตัวเลขให้วนซ้ำหาตัวเลขเฉพาะทั้งหมดที่อยู่ในช่วงที่กำหนด</p>
+        <p class="fnt">4) นำผลลัพธ์แสดงตรง Output</p>
+        <p class="fnt">5) ให้นักศึกษาปรับปรุงแก้ไขฟังก์ชัน prime() ในไฟล์ script.js</p>
+        <br />
+        <br />
+        <label for="primestart" class="fnt">เริ่มต้น</label>
+        <input type="text" id="primestart" name="primestart" class="fnt"/><span class="fnt">* จุดเริ่มต้น</span>
+        <br />
+        <label for="primeend" class="fnt">สิ้นสุด</label>
+        <input type="text" id="primeend" name="primeend" class="fnt"/><span class="fnt">* จุดสิ้นสุด</span>
+        <br />
+        <button type="submit" onclick="prime();" class="fnt">Click</button>
+        <br /> 
+        <br />
+        <label for="prime" class="fnt"><u>Prime number</u>:</label>
+        <p class="fnt" id="prime">Output</p>  
+        <hr />
+        <br />
+        <br />
+        <br />                 
+    </body>
+</html>
