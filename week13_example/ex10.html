@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 10</title>
+        <script>
+            function myConfirm() {
+                let txt = "Press a button!\nEither OK or Cancel.";
+                if (window.confirm(txt) == true) {
+                    txt = "You pressed OK!";
+                } else {
+                    txt = "You canceled!";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+            function myPrompt() {
+                let person = window.prompt("Please enter your name", "Harry Potter");
+                if (person != null) {
+                    document.getElementById("demo1").innerHTML ="Hello " + person + " !";
+                }
+                else {
+                    document.getElementById("demo1").innerHTML ="I'm sorry!!"; 
+                }
+            }
+            let winx;
+            function myOpen(){
+                winx = window.open("https://www.tni.ac.th/home/", "_blank", "width=500, height=500");
+            }
+            function myClose(){
+                winx.close();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>The Window Object</h1>
+        <h2>The confirm() Method</h2>
+        <button onclick="myConfirm();">Try it</button>
+        <h1 id="demo"></h1>
+        <h2>The prompt() Method</h2>
+        <button onclick="myPrompt();">Try it</button>
+        <h1 id="demo1"></h1>
+        <h2>The open() Method</h2>
+        <button onclick="myOpen();">Open New Window</button> 
+        <h2>The close() Method</h2>
+        <button onclick="myClose();">Close the new window</button>        
+    </body>
+</html>

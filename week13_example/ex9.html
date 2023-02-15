@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 9</title>
+        <style>
+            input[type=button]:hover{
+                background-color: blue;
+                cursor: pointer;
+            }
+            input[type=button]:active{
+                background-color: red;
+            }            
+        </style>
+        <script>
+            function myFunc1(val){
+                alert("Value1 := " + val);
+            }
+            function myFunc2(){
+                let val = document.getElementById("onchange").value;
+                alert("Value2 := " + val);
+            } 
+            function myFunc3(){
+                let val = document.getElementById("onchange").value;
+                alert("Value3 := " + val);
+            }  
+            function myFunc4(){
+                let val = document.getElementById("onchange").value;
+                alert("Value4 := " + val);
+            }  
+            function myFunc5(){
+                let val = document.getElementById("onchange").value;
+                alert("Value5 := " + val);
+            } 
+            function myFunc6(){
+                let val = document.getElementById("onchange").value;
+                alert("Value5 := " + val);
+            }             
+        </script>
+    </head>
+    <body onload="myFunc6();">
+        <label for="onchange">Onchange :</label>
+        <input type="text" id="onchange" value="12345" onchange="myFunc1(this.value);" />
+        <br />
+        <br />
+        <input type="button" id="onclick" value="onclick" onclick="myFunc2(this.value);" />
+        <br />
+        <br />
+        <input type="button" id="onmouseover" value="onmouseover" onmouseover="myFunc3(this.value);" />
+        <br />
+        <br />
+        <input type="button" id="onmouseout" value="onmouseout" onmouseout="myFunc4(this.value);" />
+        <br />
+        <br />
+        <input type="button" id="onkeydown" value="onkeydown" onkeydown="myFunc5(this.value);" />
+        <br />
+        <br />
+    </body>
+    </html>

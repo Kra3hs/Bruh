@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 11</title>
+        <script>
+            function myThis(){
+                let x=this;
+                let person = x.prompt("Please enter your name", "Harry Potter");
+                if (person != null) {
+                    document.getElementById("demo").innerHTML ="Hello " + person + " !";
+                }
+                else {
+                    document.getElementById("demo").innerHTML ="I'm sorry!!"; 
+                }
+            }
+            function myChange(x){
+                let val = x.value;
+                document.getElementById("demo1").innerHTML =val;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>'This' keyword in function</h2>
+        <button onclick="myThis();">Try it</button>
+        <h1 id="demo"></h1> 
+        <h2>The 'this' keyword in event handler</h2>
+        <label for="onchange">Tel.</label>
+        <input type="text" id="onchange" onchange="myChange(this);" value="045-6952287"/>
+        <h1 id="demo1"></h1>  
+    </body>
+</html>

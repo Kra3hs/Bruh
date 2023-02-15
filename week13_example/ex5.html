@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 5</title>
+    </head>
+    <body>
+        <script>
+            function  myFunc1 (x,  y) {
+                if (y === undefined) {
+                    y = 2;
+                }
+                return x * y;
+            }
+            function  myFunc2 (x,  y=2) {
+                return x * y;
+            }
+            let x = myFunc1(5);
+            let y = myFunc2(5);
+            console.log(x);
+            console.log(y);
+        </script>
+    </body>
+</html>
