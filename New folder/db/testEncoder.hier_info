@@ -1,0 +1,21 @@
+|testEncoder
+LEDG0 <= Lab05:inst.Y
+SW0 => Lab05:inst.D
+SW1 => Lab05:inst.C
+SW2 => Lab05:inst.B
+SW3 => Lab05:inst.A
+LEDG1 <= Lab05:inst.X
+
+
+|testEncoder|Lab05:inst
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.IN0
+C => inst7.IN0
+C => inst1.IN1
+B => inst3.IN2
+B => inst8.IN0
+A => inst9.IN0
+A => inst4.IN3
+X <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
